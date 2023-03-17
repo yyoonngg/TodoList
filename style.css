@@ -1,0 +1,49 @@
+body{
+    background-image: url("./images/background.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    font-family: "Rajdhani", sans-serif;
+}
+.container{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    min-height: 100vh;
+    height: 100%;
+    max-width: 800px;
+    padding-top: 1em;
+    border-top: 10px solid skyblue;
+    border-bottom: 10px solid skyblue;
+}
+.tabs{
+    display: flex;
+    font-size: 1em;
+}
+.tabs div{
+    padding:1em;
+    cursor: pointer;
+}
+.task-box{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+    padding: 1em;
+}
+.main{
+    border: 1px solid lightgray;
+    position: relative;
+}
+.toggle-task{
+    text-decoration: line-through;
+}
+#tab-underline{
+    background-color: lightblue;
+    height: 4px !important;
+    position: absolute;
+    top: 52px;
+    left: 0px;
+    width: 48px;
+    transition: 0.5s;
+    padding: 0px;
+}
