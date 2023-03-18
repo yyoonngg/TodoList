@@ -35,7 +35,6 @@ body{
     border-right: none;
     outline: none;
 }
-
 #text-input + label > span {
     font-weight: 300;
     position: absolute;
