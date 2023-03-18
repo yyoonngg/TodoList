@@ -10,6 +10,7 @@
 // 전체탭을 누르면 다시 전체아이템으로 돌아옴
 
 
+
 let textInput = document.getElementById("text-input");
 let addButton = document.getElementById("add-button");
 let taskList=[];
