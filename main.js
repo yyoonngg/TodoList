@@ -9,6 +9,7 @@
 // 끝남탭은, 끝난 아이템만, 진행중탭은 진행중인 아이템만
 // 전체탭을 누르면 다시 전체아이템으로 돌아옴
 
+
 let textInput = document.getElementById("text-input");
 let addButton = document.getElementById("add-button");
 let taskList=[];
