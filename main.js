@@ -17,6 +17,7 @@ let menu = "all-tab";
 let filterList=[];
 let underLine = document.getElementById("tab-underline");
 
+
 addButton.addEventListener("mousedown", addTask);
 textInput.addEventListener("keypress",function(event) {
     if(event.key == "Enter") {
