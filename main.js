@@ -17,7 +17,7 @@ let menu = "all-tab";
 let filterList=[];
 let underLine = document.getElementById("tab-underline");
 
-addButton.addEventListener("click", addTask);
+addButton.addEventListener("mousedown", addTask);
 textInput.addEventListener("keypress",function(event) {
     if(event.key == "Enter") {
         event.preventDefault();
@@ -53,20 +53,20 @@ function render(){
 
     for(let i= 0; i<resultList.length;i++){
         if(resultList[i].isComplete == true){
-            result += `<div class="task-box">
+            result += `<div class="task-box done-box">
                 <div class="toggle-task">${resultList[i].content}</div>
-                <div>
-                    <button onclick="toggleDone('${resultList[i].id}')">check</button>
-                    <button onclick="deleteTask('${resultList[i].id}','${menu}')">delete</button>
+                <div class="button-area">
+                    <button class="rotate-button" onclick="toggleDone('${resultList[i].id}')"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+                    <button class="trash-button" onclick="deleteTask('${resultList[i].id}','${menu}')"><i class="fa-solid fa-trash"></i></button>
                 </div>
             </div>`
         }
         else{
             result += `<div class="task-box">
                 <div>${resultList[i].content}</div>
-                <div>
-                    <button onclick="toggleDone('${resultList[i].id}')">check</button>
-                    <button onclick="deleteTask('${resultList[i].id}','${menu}')">delete</button>
+                <div class="button-area">
+                    <button class="check-button" onclick="toggleDone('${resultList[i].id}')"><i class="fa-solid fa-check"></i></button>
+                    <button class="trash-button" onclick="deleteTask('${resultList[i].id}','${menu}')"><i class="fa-solid fa-trash"></i></button>
                 </div>
             </div>`
         }

@@ -4,7 +4,6 @@ body{
     background-size: cover;
     margin: 0;
     height: 100vh;
-    font-family: "Rajdhani", sans-serif;
 }
 .container{
     background-color: white;
@@ -16,6 +15,46 @@ body{
     border-top: 10px solid skyblue;
     border-bottom: 10px solid skyblue;
 }
+.head-font{
+    font-family: Comic Sans MS;
+}
+.input-area{
+    position: relative;
+}
+#text-input{
+    background-color: white;
+    border-color: skyblue;
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+}
+#text-input:focus{
+    padding-top:35px;
+    transition: 0.5s;
+    border-bottom: 3px solid skyblue;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    outline: none;
+}
+#text-input + label > span {
+    font-weight: 300;
+    position: absolute;
+    top:5px;
+    left: 10px;
+    margin: 0;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+#text-input:focus + label > span {
+    top: 0px;
+    color: #333;
+}
+#add-button{
+    background-color: skyblue;
+    border: none;
+}
+#add-button:hover{
+    transform: scale(1.1) ;
+}
 .tabs{
     display: flex;
     font-size: 1em;
@@ -23,12 +62,16 @@ body{
 .tabs div{
     padding:1em;
     cursor: pointer;
+    font-family: Comic Sans MS;
 }
 .task-box{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-top: 1px solid lightgray;
-    padding: 1em;
+    height: 3em;
+    position: relative;
+    padding-left: 1em;
 }
 .main{
     border: 1px solid lightgray;
@@ -46,4 +89,40 @@ body{
     width: 48px;
     transition: 0.5s;
     padding: 0px;
+}
+.button-area{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1em;
+    background-color: white;
+    height: 100%;
+    margin: 0;
+}
+.done-box{
+    background-color: lightskyblue;
+    color: lightslategray;
+}
+.trash-button{
+    background-color: white;
+    border: none;
+    color: red;
+    width:5em;
+    height: 100%;
+    margin:0;
+}
+.rotate-button{
+    background-color: white;
+    border: none;
+    color: gray;
+    width:5em;
+    height: 100%;
+    margin:0;
+}
+.check-button{
+    background-color: white;
+    border: none;
+    color: green;
+    width:5em;
+    height: 100%;
+    margin:0;
 }
