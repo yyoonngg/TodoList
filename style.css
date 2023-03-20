@@ -1,129 +1,91 @@
 body{
-    background-image: url("./images/background.avif");
+    background-image: url(./images/background.avif);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0;
     height: 100vh;
 }
 .container{
+    display: flex;
+    flex-direction: column;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    min-height: 100vh;
+    max-height: 100vh;
     height: 100%;
+    padding: 1em;
+    border-bottom: 20px solid wheat;
+    border-top: 20px solid wheat;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     max-width: 800px;
-    padding-top: 1em;
-    border-top: 10px solid skyblue;
-    border-bottom: 10px solid skyblue;
 }
-.head-font{
+.headline{
     font-family: Comic Sans MS;
+    margin-bottom: 0.5em;
 }
-.input-area{
-    position: relative;
-}
-#text-input{
-    background-color: white;
-    border-color: skyblue;
-    transition: padding-top 0.2s ease, margin-top 0.2s ease;
-}
-#text-input:focus{
-    padding-top:35px;
-    transition: 0.5s;
-    border-bottom: 3px solid skyblue;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    outline: none;
-}
-
-#text-input + label > span {
-    font-weight: 300;
-    position: absolute;
-    top:5px;
-    left: 10px;
-    margin: 0;
-    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
-  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
-}
-#text-input:focus + label > span {
-    top: 0px;
-    color: #333;
-}
-#add-button{
-    background-color: skyblue;
-    border: none;
-}
-#add-button:hover{
-    transform: scale(1.1) ;
+.main{
+    border: 1px solid lightgray;
+    margin-top:1em;
 }
 .tabs{
     display: flex;
-    font-size: 1em;
+    border-bottom: 1px solid lightgray;
+    position: relative;
 }
 .tabs div{
     padding:1em;
     cursor: pointer;
     font-family: Comic Sans MS;
 }
+#add-button{
+    border:none;
+    background-color: wheat;
+    margin-left: 0.3em;
+}
+#add-button:hover{
+    color:white;
+    transform: scale(1.1);
+}
 .task-box{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid lightgray;
-    height: 3em;
-    position: relative;
+    border-bottom: 1px solid lightgray;
     padding-left: 1em;
+    height:4em;
+    align-items: center;
 }
-.main{
-    border: 1px solid lightgray;
-    position: relative;
+.done-box{
+    background-color: wheat;
 }
 .toggle-task{
     text-decoration: line-through;
 }
-#tab-underline{
-    background-color: lightblue;
-    height: 4px !important;
+#underbar{
     position: absolute;
+    height: 4px;
+    background-color: wheat;
+    width: 48px;
+    padding: 0px;
     top: 52px;
     left: 0px;
-    width: 48px;
     transition: 0.5s;
-    padding: 0px;
-}
-.button-area{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 1em;
-    background-color: white;
-    height: 100%;
-    margin: 0;
-}
-.done-box{
-    background-color: lightskyblue;
-    color: lightslategray;
-}
-.trash-button{
-    background-color: white;
-    border: none;
-    color: red;
-    width:5em;
-    height: 100%;
-    margin:0;
 }
 .rotate-button{
-    background-color: white;
     border: none;
+    background-color: white;
     color: gray;
-    width:5em;
-    height: 100%;
-    margin:0;
 }
 .check-button{
-    background-color: white;
     border: none;
+    background-color: white;
     color: green;
-    width:5em;
+}
+.delete-button{
+    border: none;
+    background-color: white;
+    color: red;
+}
+.button-area{
+    background-color: white;
     height: 100%;
-    margin:0;
+    width: 6em;
+    display: flex;
+    justify-content: space-around;
 }
